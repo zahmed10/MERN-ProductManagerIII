@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios';
-export default () => {
+const ProductForm =  () => {
     //keep track of what is being typed via useState hook
     const [title, setTitle] = useState(""); 
     const [price, setPrice] = useState(0);
@@ -38,3 +38,5 @@ export default () => {
         </form>
     )
 }
+
+export default ProductForm;

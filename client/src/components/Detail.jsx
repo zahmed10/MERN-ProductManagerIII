@@ -4,6 +4,7 @@ import { useHistory, Link, useParams } from "react-router-dom";
     
 const Detail = (props) => {
     const { removeFromDom } = props;
+    console.log("removeFromDom ˘˘˘˘˘˘", removeFromDom);
     const [product, setProduct] = useState({})
     const { id } = useParams();
     const history = useHistory();
@@ -23,7 +24,7 @@ const Detail = (props) => {
         axios.get('http://localhost:8000/api/products/' +id)
             .then(res => setProduct(res.data))
             .catch(err => console.error(err));
-    }, []);
+    }, [id]);
 
 
     
